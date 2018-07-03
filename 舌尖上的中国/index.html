@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>舌尖上的中国</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/player.js"></script>
+    <script type="text/javascript" src="js/playerslider.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // 焦点图片水平滚动
+            $("#slider1").Xslider({
+                // 默认配置
+                affect: 'scrollx', //效果  有scrollx|scrolly|fade|none
+                speed: 800, //动画速度
+                space: 6000, //时间间隔
+                auto: true, //自动滚动
+                trigger: 'mouseover', //触发事件 注意用mouseover代替hover
+                conbox: '.conbox', //内容容器id或class
+                ctag: 'div', //内容标签 默认为<a>
+                switcher: '.switcher', //切换触发器id或class
+                stag: 'a', //切换器标签 默认为a
+                current:'cur', //当前切换器样式名称
+                rand:false //是否随机指定默认幻灯图片
+            });
+            // 焦点图片垂直滚动
+            $("#slider2").Xslider({
+                affect:'scrolly',
+                ctag: 'div',
+                speed:400
+            });
+            // 焦点图片淡隐淡现
+            $("#slider3").Xslider({
+                affect:'fade',
+                ctag: 'div'
+            });
+            // 选项卡
+            $("#slider4").Xslider({
+                affect:'none',
+                ctag: 'div',
+                speed:10
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div class="background">
+    <div class="box">
+        <div class="logo">
+            <img src="images/img001.png" width="600px" height="227px">
+            <div class="banner">
+                <img src="images/img002.jpg" style="width: 100%;height: auto">
+            </div>
+            <div class="white">
+            </div>
+            <ul>
+                <li><a href="sub1.html">第一季</a></li>
+                <li><a href="sub2.html">第二季</a></li>
+                <li><a href="sub3.html">第三季</a></li>
+            </ul>
+
+            <div class="main">
+                <div class="matter1">
+                    <div class="left">
+                        <div id="slider3" class="slider">
+                            <div class="conbox">
+                                <div><a href="#" title=""><img src="images/img003.jpg" width="1200px" height="800px" /></a></div>
+                                <div><a href="#" title=""><img src="images/img004.png" width="1200px" height="800px" /></a></div>
+                                <div><a href="#" title=""><img src="images/img005.jpg" width="1200px" height="800px" /></a></div>
+                            </div>
+                            <div class="switcher">
+                                <a href="#" class="cur">1</a>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<div class="white"></div>
+
+            <div class="container">
+                <div class="font">
+                <p>《舌尖上的中国》是由陈晓卿执导，</p>
+                <p>中国中央电视台出品的一部美食类记录片。</p>
+                <p>《舌尖上的中国》主题围绕中国人对美食的美好和生活的美好追求，</p>
+                <p>用具体人物故事串联起来讲述了中国各地的美食生态。</p>
+                </div>
+            </div>
+            <div class="blank"></div>
+            <div class="footer">
+                <p>201600286 林琪琪 ©版权所有</p>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+</body>
